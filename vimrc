@@ -22,12 +22,9 @@ Bundle 'scrooloose/syntastic'
 " General
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Shougo/unite.vim'
 Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
 
-
-" unite
-nnoremap f :Unite -start-insert file
 
 " syntastic
 let g:syntastic_javascript_checkers=['jshint']
@@ -94,6 +91,9 @@ nnoremap <S-Tab> :NERDTreeToggle<CR>
 nnoremap <silent> <Leader><Tab> :NERDTreeFind<cr>"
 let NERDTreeShowHidden=1 
 
+"ctrlp
+let g:ctrlp_working_path_mode = 0
+set wildignore+=*/fixtures/*,*/tmp/*,*.swp,*/.git/* 
 
 
 "Fugitive
