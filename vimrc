@@ -3,28 +3,32 @@ inoremap <C-d> <Del>
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " " required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Syntax
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Raimondi/delimitMate'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Raimondi/delimitMate'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
 
 " General
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " syntastic
 let g:syntastic_javascript_checkers=['jshint']
@@ -32,7 +36,7 @@ let g:syntastic_javascript_checkers=['jshint']
 
 
 "delimitMate
-let delimitMate_expand_cr = 1
+let delimitMate_expand_cr = 10
 imap <C-c> <CR><Esc>O
 
 
